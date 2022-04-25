@@ -11,7 +11,7 @@ export class BoardsController {
 
     @Get()
     getAllBoard(): Promise<Board[]> {
-        return this.boardsService.getAllBoards();
+        return this.boardsService.getAllBoards()
     }
 
     @Get('/:id')

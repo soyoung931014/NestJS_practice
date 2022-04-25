@@ -5,13 +5,14 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { BoardRepository } from './board.repository';
 import { Board } from './board.entity';
-import { resolve } from 'path/posix';
+
 @Injectable()
 export class BoardsService {
     constructor(
         @InjectRepository(BoardRepository)
         private boardRepository: BoardRepository,
     ) { }
+
     // 모두 조회
     async getAllBoards(): Promise<Board[]> {
         return this.boardRepository.find();
