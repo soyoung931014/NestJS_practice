@@ -6,7 +6,7 @@ export const typeORMConfig: TypeOrmModuleOptions = {
     "port": 3306,
     "username": "root",
     "password": "6153",
-    "database": "Board",
+    "database": "test",
     "entities": ["dist/**/*.entity{.ts,.js}"],
     "synchronize": true
 }
